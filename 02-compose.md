@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-20 10:27:24
- * @LastEditTime: 2020-05-20 14:35:05
+ * @LastEditTime: 2020-05-20 14:38:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /axzo-oms/Users/fgl/functional/02-compose.md
@@ -72,8 +72,8 @@
 
 ```c
 const compose = function(...funcs){
-    return funcs.reduce((a,b)=>{
-        return (...args)=>{
+    return funcs.reduce( (a,b) => {
+        return (...args) => {
             return a(b(...args))
         }
     })
