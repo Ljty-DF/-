@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-20 10:27:24
- * @LastEditTime: 2020-05-20 14:49:43
+ * @LastEditTime: 2020-05-20 14:50:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /axzo-oms/Users/fgl/functional/02-compose.md
@@ -95,4 +95,4 @@ const compose = function(...funcs){
 
 ```
 
-所以 compose(fn1,fn2,fn3)(...args) 相当于 fn1(fn2(fn3(..args)))
+所以 **compose(fn1,fn2,fn3)(...args)** 相当于 **fn1(fn2(fn3(..args)))**
