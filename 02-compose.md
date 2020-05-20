@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-20 10:27:24
- * @LastEditTime: 2020-05-20 14:42:19
+ * @LastEditTime: 2020-05-20 14:49:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /axzo-oms/Users/fgl/functional/02-compose.md
@@ -83,4 +83,16 @@ const compose = function(...funcs){
         }
     })
 }
+
 ```
+
+这些串联函数的写法不优雅，**ES6 的箭头函数简写**,从而看起来更舒服一些
+
+```c
+ function compose(...funcs){
+    return funcs.reduce( (a,b) => (...args) => a(b(..args)) )
+ }
+
+```
+
+所以 compose(fn1,fn2,fn3)(...args) 相当于 fn1(fn2(fn3(..args)))
