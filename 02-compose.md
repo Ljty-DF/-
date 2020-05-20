@@ -1,6 +1,6 @@
 ## compose 函数的实现
 
-> 总结 compose 函数的实现过程
+> 总结 compose 函数的实现过程 compose(fn1,fn2,fn3)
 
 ### 大致特点
 
