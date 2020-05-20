@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-20 10:27:24
- * @LastEditTime: 2020-05-20 14:38:28
+ * @LastEditTime: 2020-05-20 14:42:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /axzo-oms/Users/fgl/functional/02-compose.md
@@ -71,6 +71,11 @@
 ### componse 聚合函数的顺序是从右往左 form right to left
 
 ```c
+/**
+ * @description:
+ * @param {type}
+ * @return:
+ */
 const compose = function(...funcs){
     return funcs.reduce( (a,b) => {
         return (...args) => {
