@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-20 11:24:57
- * @LastEditTime: 2020-05-21 10:18:44
+ * @LastEditTime: 2020-05-21 17:25:55
  * @LastEditors: Please set LastEditors
  * @Description: .call()和.apply()方法的区别除了第二个传的参数不一样以外，作用都是改变this的指向，然后执行函数
  *               也就是对象调用一个函数
@@ -39,4 +39,22 @@ function bar(name, age) {
 }
 
 let res = bar.call2(obj, "fgl", 24);
+var name = "dmy";
+name = "wql";
 console.log(res);
+console.log(this);
+this.name = "fgl";
+console.log(this);
+// console.log(global);
+console.log(this === globalThis);
+
+const test = {
+  outer: function () {
+    function inner() {
+      // 此时this指向window
+      console.log(this);
+    }
+    inner();
+  },
+};
+test.outer();
