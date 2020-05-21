@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-20 11:24:57
- * @LastEditTime: 2020-05-21 17:25:55
+ * @LastEditTime: 2020-05-21 17:42:26
  * @LastEditors: Please set LastEditors
  * @Description: .call()和.apply()方法的区别除了第二个传的参数不一样以外，作用都是改变this的指向，然后执行函数
  *               也就是对象调用一个函数
@@ -58,3 +58,16 @@ const test = {
   },
 };
 test.outer();
+
+this.x = 9;
+function Module(x) {
+  this.x = x;
+  this.getX = () => {
+    console.log(this);
+    return this.x;
+  };
+}
+const mo = new Module(81);
+mo.getX(); // 81
+const retrieveX = mo.getX;
+retrieveX();
